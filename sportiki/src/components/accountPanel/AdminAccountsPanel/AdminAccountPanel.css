@@ -1,0 +1,26 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  background-image: url("../../../Images/Fon.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: auto;
+  justify-content: center;
+  align-items: flex-start;
+  color: aliceblue;
+  font-size: 5vh;
+  padding-bottom: 10vh;
+}
+
+.main h3 {
+  width: 70vh;
+  margin-top: 5vh;
+  padding: 2vh;
+  margin-bottom: 5vh;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.774);
+  border-radius: 20px;
+}

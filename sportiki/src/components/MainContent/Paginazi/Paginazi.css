@@ -1,0 +1,77 @@
+.Strelas,
+.Strelae,
+.Paga,
+.PagaActive {
+  background-color: rgba(0, 0, 0, 0.555);
+  color: #f9f0da;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  display: flex;
+  transition: 0.1s linear;
+  width: 8vw; /* Используем vw для адаптивности */
+  height: 10vh; /* Используем vh для адаптивности */
+  margin: 1% 2%; /* Упрощаем отступы */
+  user-select: none;
+}
+
+.PagaActive {
+  background-color: skyblue;
+  color: rgba(0, 0, 0, 0.911);
+  width: 9vw;
+  height: 12vh; /* Увеличиваем высоту для активного состояния */
+}
+
+.Strelas:hover,
+.Strelae:hover,
+.Paga:hover {
+  background-color: rgba(0, 0, 0, 0.082);
+  cursor: pointer;
+}
+
+.Paginazi {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.342);
+  flex-wrap: wrap;
+  border-radius: 50px;
+  height: auto; /* Позволяем высоте изменяться автоматически */
+  width: 80%; /* Увеличиваем ширину для адаптивности */
+  font-size: 3.5vh; /* Шрифт также будет адаптивным */
+  margin-bottom: 7%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Медиа-запросы для дополнительных изменений на меньших экранах */
+@media (max-width: 768px) {
+  .Strelas,
+  .Strelae,
+  .Paga,
+  .PagaActive {
+    width: 12vw; /* Увеличиваем ширину на меньших экранах */
+    height: 8vh; /* Уменьшаем высоту на меньших экранах */
+    font-size: 2.5vh; /* Уменьшаем размер шрифта */
+  }
+
+  .Paginazi {
+    width: 90%; /* Ширина контейнера на меньших экранах */
+    height: auto; /* Высота адаптируется автоматически */
+    font-size: 3vh; /* Уменьшаем размер шрифта */
+  }
+}
+
+@media (max-width: 480px) {
+  .Strelas,
+  .Strelae,
+  .Paga,
+  .PagaActive {
+    width: 15vw; /* Еще больше увеличиваем ширину на мобильных устройствах */
+    height: 7vh; /* Уменьшаем высоту еще больше */
+    font-size: 2vh; /* Уменьшаем размер шрифта еще больше */
+  }
+
+  .Paginazi {
+    font-size: 2.5vh; /* Уменьшаем размер шрифта в контейнере */
+  }
+}

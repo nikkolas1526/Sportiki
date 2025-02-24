@@ -1,0 +1,86 @@
+.Strelas3 {
+  background-color: rgba(0, 0, 0, 0.555);
+  color: #f9f0da;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  display: flex;
+  transition: 0.1s linear;
+  width: 8%;
+  height: 75%;
+  margin-right: 5%;
+  user-select: none;
+  margin-left: 2%;
+}
+.Strelae3 {
+  background-color: rgba(0, 0, 0, 0.555);
+  color: #f9f0da;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 50%;
+  user-select: none;
+  transition: 0.1s linear;
+  width: 8%;
+  height: 75%;
+  margin-left: 5%;
+}
+.Paga3 {
+  background-color: rgba(0, 0, 0, 0.555);
+  border-radius: 50%;
+  margin-right: 2%;
+  margin-left: 2%;
+  display: flex;
+  user-select: none;
+  align-items: center;
+  justify-content: center;
+  transition: 0.1s linear;
+  color: #f9f0da;
+  width: 8%;
+  height: 75%;
+}
+.PagaActive3 {
+  background-color: skyblue;
+  user-select: none;
+  border-radius: 50%;
+  margin-right: 2%;
+  margin-left: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.1s linear;
+  color: rgba(0, 0, 0, 0.911);
+  width: 9%;
+  height: 80%;
+}
+.Strelas3:hover {
+  background-color: rgba(0, 0, 0, 0.082);
+  transition: 0.1s linear;
+  cursor: pointer;
+}
+.Strelae3:hover {
+  background-color: rgba(0, 0, 0, 0.082);
+  transition: 0.1s linear;
+  cursor: pointer;
+}
+.Paga3:hover {
+  background-color: rgba(0, 0, 0, 0.082);
+  transition: 0.1s linear;
+  cursor: pointer;
+}
+
+.Paginazi3 {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.342);
+  flex-wrap: wrap;
+  border-radius: 50px;
+  height: 11vh;
+  width: 50%;
+  font-size: 3.5vh;
+  margin-bottom: 7%;
+  margin-top: 5%;
+  align-items: center;
+
+  justify-content: center;
+}

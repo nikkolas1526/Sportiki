@@ -1,0 +1,260 @@
+.Cart {
+  background-color: rgba(0, 0, 0, 0.671);
+  width: 80%; /* Заменили фиксированную ширину на относительную */
+
+  max-width: 350px; /* Максимальная ширина для больших экранов */
+  height: 60vh; /* Сделаем высоту авто */
+  display: flex;
+  border-radius: 15px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: #f9f0da;
+  padding: 2vh;
+  transition: 0.1s linear;
+  margin: 1.2vh auto; /* Центральное выравнивание */
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.ImageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s ease-out;
+}
+
+.articul {
+  width: 100%;
+  height: 6%;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 2vh;
+}
+
+.Dot {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  box-shadow: 0 0 60px 30px rgba(255, 255, 255, 0.295),
+    0 0 120px 60px rgba(255, 255, 255, 0.226),
+    0 0 150px 75px rgba(255, 255, 255, 0.233);
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+}
+
+.PriceActual,
+.PriceWithSale {
+  font-style: inherit;
+  margin: 2vh 1vh;
+}
+
+.CartDel {
+  position: relative;
+  text-decoration: none;
+}
+
+.CartDel::before {
+  border-radius: 10px;
+  content: "";
+  width: 100%;
+  height: 0.15em;
+  background-color: tomato;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  transform: rotate(-8deg);
+}
+
+.Scale div {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.starKa,
+.starKa2 {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.Cart:hover {
+  background-color: rgba(0, 0, 0, 0.452);
+  transition: 0.1s linear;
+}
+
+.changeNumber {
+  font-size: 3vh;
+  background-color: rgba(0, 255, 255, 0);
+  border-radius: 15px;
+  border: 2px white solid;
+  color: white;
+  padding: 1vh;
+  height: 80%;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1vh;
+}
+
+.changeNumber:hover {
+  cursor: pointer;
+  background-color: rgb(10, 55, 153);
+  transition: 0.1s linear;
+}
+
+.numberOfItem {
+  font-size: 3vh;
+  color: white;
+  background-color: rgba(0, 255, 255, 0);
+  border: none;
+  text-align: center;
+}
+
+.buttonsCart {
+  display: flex;
+  padding-top: 3vh;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.NameIt {
+  height: 17%;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-size: 2.5vh;
+  padding: 0 2%;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.delete {
+  background-color: tomato;
+  color: white;
+  border: none;
+  font-size: 2vh;
+  padding: 1vh;
+  border-radius: 10px;
+  margin: 1vh;
+  cursor: pointer;
+  margin-top: 3vh;
+}
+
+.Photo {
+  height: 52%; /* Ограничиваем высоту для гармонии */
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  width: 95%;
+  font-size: 3vh;
+  margin-bottom: 1.5vh;
+  transition: 0.1s linear;
+  border-radius: 10%;
+  padding: 4vh;
+  overflow: hidden; /* Избежать выхода контента за границы */
+}
+
+.Photo img {
+  height: 100%; /* Устанавливаем высоту изображения на 100% для родительского блока */
+  width: 100%; /* Устанавливаем ширину изображения на 100% для родительского блока */
+  object-fit: contain; /* Обеспечивает правильное соотношение сторон */
+}
+
+.starKa,
+.starKa2 {
+  max-height: 100%; /* Устанавливаем максимальную высоту */
+  max-width: 100%; /* Устанавливаем максимальную ширину */
+  object-fit: contain; /* Обеспечивает правильное соотношение сторон */
+}
+
+.Sale {
+  width: 100%;
+  font-size: 2.5vh;
+  color: tomato;
+  display: flex;
+  padding-left: 1%;
+  height: 4%;
+  align-items: center;
+  justify-content: left;
+}
+
+.Price {
+  width: 100%;
+  font-size: 3vh;
+  display: flex;
+  height: 4%;
+  padding-top: 2%;
+  align-items: center;
+  justify-content: center;
+}
+
+.Scale {
+  width: 100%;
+
+  display: flex;
+  font-size: 2vh;
+  height: 4%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Медиазапросы для адаптивности */
+@media (max-width: 768px) {
+  .Cart {
+    width: 90%; /* Увеличиваем ширину на таблете и мобильных устройствах */
+    padding: 3vh 1vh; /* Увеличиваем внутренние отступы */
+  }
+
+  .PriceActual,
+  .PriceWithSale,
+  .NameIt {
+    font-size: 3vh; /* Увеличиваем шрифт для мобильных устройств */
+  }
+
+  .changeNumber {
+    width: 30%; /* Увеличиваем ширину кнопки */
+  }
+
+  .buttonsCart {
+    flex-direction: column; /* Делаем кнопки вертикальными */
+  }
+
+  .delete {
+    font-size: 2.5vh; /* Увеличиваем шрифт для кнопки удаления */
+  }
+}
+
+@media (max-width: 480px) {
+  .Cart {
+    padding: 2vh 1vh; /* Уменьшаем отступы для маленьких экранов */
+  }
+
+  .articul {
+    font-size: 1.5vh; /* Значительно уменьшить размер текста */
+  }
+
+  .PriceActual,
+  .PriceWithSale {
+    font-size: 2.5vh; /* Корректируем шрифты */
+  }
+
+  .Sale {
+    font-size: 2vh; /* Берем меньший размер для акций */
+  }
+
+  .StarKa {
+    height: 70%; /* Убедиться, что изображение подходит по размеру */
+  }
+}

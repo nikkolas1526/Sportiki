@@ -1,0 +1,149 @@
+.Left {
+  display: flex;
+  height: 90vh; /* Высота будет составлять 90% от высоты видимой области */
+  width: 20vw; /* Ширина составит 20% от ширины видимой области */
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.637);
+  border-radius: 10px;
+  margin: 2vh auto; /* Установим автоматическое центрирование */
+  margin-top: 22vh; /* Отступ сверху */
+  font-size: 3vh; /* Размер шрифта, относительный к высоте */
+  padding: 3vh; /* Установим одинаковый внутренний отступ */
+}
+
+.slider {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+  display: flex;
+  display: flex;
+}
+
+.FilterSelectAva,
+.FilterSelectSale {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1.5px white solid;
+  height: auto;
+  width: auto;
+  font-size: 2vh;
+  background-color: rgba(0, 0, 0, 0.651);
+  color: white;
+  text-align: center;
+  margin-left: 3vh;
+  padding: 2vh;
+}
+
+.FilterHeader {
+  font-size: 5vh;
+}
+
+.FilterButton {
+  font-size: 2.5vh;
+  color: white;
+  border: none;
+  height: auto;
+  width: auto;
+  text-align: center;
+  padding: 2vh;
+  background-color: rgba(255, 255, 255, 0.103);
+  border-radius: 20px;
+  transition: 0.1s linear;
+  cursor: pointer;
+}
+
+.FilterButton:hover {
+  font-size: 2.2vh; /* Уменьшаем размер шрифта при наведении */
+  transition: 0.1s linear;
+  padding: 2.2vh; /* Увеличиваем отступ для визуального эффекта */
+}
+
+.SaleFilterPanel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.track {
+  background: #bcecff;
+  justify-content: center;
+  border-radius: 5px;
+  align-items: center;
+  height: 4px;
+  display: flex;
+}
+
+.thumb {
+  height: 25px;
+  width: 25px;
+  display: flex;
+  background-color: #4fa4ff;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Медиазапросы для адаптивности */
+@media (max-width: 1024px) {
+  .Left {
+    width: 30vw; /* Увеличиваем ширину для планшетов */
+    padding: 4vh; /* Увеличиваем внутренние отступы */
+  }
+
+  .FilterHeader {
+    font-size: 4vh; /* Уменьшаем размер заголовка */
+  }
+
+  .FilterButton {
+    font-size: 2vh; /* Уменьшаем размер кнопки */
+  }
+}
+
+@media (max-width: 768px) {
+  .Left {
+    width: 80vw; /* Увеличиваем ширину для мобильных устройств */
+    height: auto; /* Позволяем высоте адаптироваться */
+    margin-top: 5vh; /* Уменьшаем верхний отступ */
+    padding: 5vh; /* Увеличиваем отступы для маленьких экранов */
+  }
+
+  .FilterHeader {
+    font-size: 3.5vh; /* Уменьшаем размер заголовка */
+  }
+
+  .FilterButton {
+    font-size: 1.8vh; /* Уменьшаем размер кнопки */
+    padding: 1.5vh; /* Уменьшаем отступы в кнопке */
+  }
+
+  .slider {
+    flex-direction: column; /* Изменяем направление для меньших экранов */
+  }
+}
+
+@media (max-width: 480px) {
+  .Left {
+    padding: 3vh; /* Увеличиваем внутренние отступы для маленьких экранов */
+    font-size: 2.5vh; /* Уменьшаем общий шрифт */
+    margin: 4vh auto; /* Увеличиваем отступ сверху */
+  }
+
+  .FilterHeader {
+    font-size: 3vh; /* Уменьшаем размер заголовка */
+    margin: 2vh;
+  }
+
+  .FilterButton {
+    font-size: 1.5vh; /* Уменьшаем размер кнопки */
+    padding: 1vh; /* Уменьшаем отступы в кнопке */
+    margin: 2vh;
+  }
+}

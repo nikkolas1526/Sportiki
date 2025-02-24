@@ -1,0 +1,186 @@
+.mainDivOrderingPan {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.infoDivOrderingPan {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  width: 90vw;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.goOut {
+  position: absolute;
+}
+.infoDivOrderingPan > button {
+  top: 15px;
+  right: 15px;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #555;
+  cursor: pointer;
+}
+.infoDivOrderingPan > button:hover {
+  color: #000;
+}
+
+.infoDivOrderingPan > div:nth-child(2) {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.infoDivOrderingPan > div:nth-child(3) {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.itemsInOrder {
+  margin-top: 15px;
+  flex: 1;
+  padding: 10px;
+}
+
+.orderItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+}
+
+.itemName2 {
+  width: 40%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 1.2rem;
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+  color: #333;
+  resize: none;
+  font-weight: 500;
+}
+
+.itemPrice {
+  width: 15%;
+  text-align: right;
+  font-size: 1.2rem;
+}
+
+.itemCount {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  justify-content: center;
+}
+
+.changeNumber3 {
+  font-size: 1.8rem;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid #888;
+  color: #333;
+  padding: 7px;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.numberOfItem3 {
+  font-size: 1.2rem;
+  color: #333;
+  width: 40px;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+}
+
+.changeNumber3:hover {
+  background-color: #e0e0e0;
+}
+
+.numberOfItem3:disabled {
+  cursor: not-allowed;
+}
+
+.itemTotalPrice {
+  width: 25%;
+  text-align: right;
+  font-size: 1.2rem;
+}
+
+.totalPrice {
+  margin-top: 25px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.orderButton {
+  padding: 12px 24px;
+  margin-top: 30px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  align-self: center;
+  transition: background-color 0.3s;
+  margin-bottom: 20px; /* Добавил отступ снизу */
+}
+.orderButton:hover {
+  background-color: #4cae4c;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 600px) {
+  .infoDivOrderingPan {
+    padding: 20px;
+  }
+  .orderItem {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 0;
+  }
+  .itemName2,
+  .itemPrice,
+  .itemCount,
+  .itemTotalPrice {
+    width: 100%;
+    text-align: left;
+    margin: 5px 0;
+  }
+
+  .itemCount {
+    justify-content: flex-start; /* Выравнивание по левому краю на мобильных */
+  }
+}

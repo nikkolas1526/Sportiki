@@ -1,0 +1,95 @@
+.MainContent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  background-image: url("../../Images/Fon.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: auto;
+  justify-content: center;
+  align-items: flex-start;
+  color: aliceblue;
+  font-size: 5vh;
+}
+
+.Items {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 20vh;
+}
+
+.Right {
+  width: 75%;
+  align-items: center;
+  justify-content: flex-start;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.NoItems {
+  background-color: rgba(0, 0, 0, 0.493);
+  width: auto;
+  height: auto;
+  font-size: 8vh;
+  padding: 10vh;
+  margin-top: 20vh;
+  margin-bottom: 30vh;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+}
+
+/* Стили для корзины */
+.cart-footer {
+  display: flex;
+  flex-direction: column; /* Изменили на column */
+  align-items: center; /* Центрирование по горизонтали */
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.479);
+  margin-top: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: center; /* Центрирование текста */
+}
+
+.cart-summary {
+  font-size: 3vh;
+  margin-bottom: 25px;
+  padding-top: 20px; /* Отступ между суммой и кнопкой */
+}
+
+.checkout-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  margin-top: 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 3vh;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.checkout-button:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  .cart-footer {
+    align-items: center; /* Центрирование на маленьких экранах */
+  }
+}

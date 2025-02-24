@@ -1,0 +1,100 @@
+.Sorty {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 2vh auto; /* Центрируем .Sorty по горизонтали */
+  margin-top: 7vh;
+  margin-bottom: 5vh;
+  border-radius: 10px;
+  height: 9vh;
+  width: 50%; /* Начальная ширина для больших экранов */
+  align-items: center;
+  justify-content: center;
+}
+
+.Sorty .modal-content {
+  margin-right: 0vh;
+}
+
+.Sorty div {
+  display: flex;
+  font-size: 3.5vh; /* Размер шрифта для контейнера */
+  margin-right: 2vh;
+}
+
+.Sorty select {
+  background-color: rgba(0, 0, 0, 0.603);
+  color: #f9f0da;
+  width: 53%; /* Ширина select по умолчанию */
+  cursor: pointer;
+  appearance: none;
+  height: 60%;
+  align-items: center;
+  border-width: 0px;
+  border-radius: 10px;
+  display: flex;
+  transition: 0.2s linear;
+  text-align: center;
+  font-size: 2.5vh; /* Размер шрифта для select */
+  margin-left: 2vh;
+}
+
+.Sorty select:focus {
+  background-color: rgba(0, 0, 0, 0.555);
+  height: 75%; /* Увеличение высоты при фокусе */
+  transition: 0.2s linear;
+}
+
+.Sorty select:hover {
+  background-color: rgba(0, 0, 0, 0.555);
+  height: 75%; /* Увеличение высоты при наведении */
+  transition: 0.2s linear;
+}
+
+/* Медиазапросы для адаптивности */
+@media (max-width: 1024px) {
+  .Sorty {
+    width: 70%; /* Увеличиваем ширину для средних экранов */
+    height: 75%; /* Уменьшаем высоту для лучшего отображения */
+  }
+
+  .Sorty div {
+    font-size: 3vh; /* Уменьшаем размер шрифта для средних экранов */
+  }
+
+  .Sorty select {
+    font-size: 2.3vh; /* Уменьшаем размер шрифта в select */
+  }
+}
+
+@media (max-width: 768px) {
+  .Sorty {
+    width: 90%; /* Увеличиваем ширину для мобильных устройств */
+    height: 75%; /* Высота остается одинаковой */
+  }
+
+  .Sorty div {
+    font-size: 2.8vh; /* Уменьшаем размер шрифта для мобильных устройств */
+  }
+
+  .Sorty select {
+    font-size: 2vh; /* Уменьшаем размер шрифта в select */
+    height: 50%; /* Уменьшаем высоту select для мобильных устройств */
+  }
+}
+
+@media (max-width: 480px) {
+  .Sorty {
+    height: auto; /* Позволяем высоте адаптироваться на очень маленьких экранах */
+    /* Добавляем отступы для лучшего восприятия */
+  }
+
+  .Sorty div {
+    font-size: 2.5vh; /* Уменьшаем размер шрифта для маленьких экранов */
+  }
+
+  .Sorty select {
+    font-size: 1.8vh; /* Уменьшаем размер шрифта в select */
+    height: 45%; /* Далее уменьшаем высоту select */
+  }
+}

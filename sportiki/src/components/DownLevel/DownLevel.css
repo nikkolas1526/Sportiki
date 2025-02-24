@@ -1,0 +1,220 @@
+.FDown {
+  font-size: 3vh;
+  display: flex;
+  justify-items: center;
+  height: 17vh;
+}
+.SDown {
+  font-size: 2vh;
+  height: 11vh;
+  align-content: flex-end;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  color: skyblue;
+}
+
+.Koko {
+  font-size: 3vh;
+}
+
+.Contacts,
+.Help,
+.Nets,
+.Info,
+.Time {
+  display: flex;
+  height: 17vh;
+  color: #f9f0da;
+  width: 20%;
+  font-size: 3vh;
+  padding: 1vh;
+  border-width: 1px;
+  justify-content: center;
+  border-style: solid;
+  border-bottom-width: 0px;
+  border-top-width: 0px;
+  align-items: center;
+  box-sizing: border-box;
+}
+.Nets {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.Nets div {
+  width: 21%;
+  height: 8vh;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  display: flex;
+}
+.Insta a {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.1s linear;
+}
+.Vka a {
+  width: 100%;
+  height: 8vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  transition: 0.1s linear;
+  cursor: pointer;
+}
+.Tga a {
+  width: 100%;
+  height: 8vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  transition: 0.1s linear;
+  cursor: pointer;
+}
+.Dsa a {
+  width: 100%;
+  display: flex;
+  height: 8vh;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.1s linear;
+}
+.Insta img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  display: flex;
+  transition: 0.1s linear;
+}
+.Vka img {
+  display: flex;
+  width: 100%;
+  height: auto;
+  transition: 0.1s linear;
+  cursor: pointer;
+}
+.Tga img {
+  width: 100%;
+  height: auto;
+  transition: 0.1s linear;
+  display: flex;
+  cursor: pointer;
+}
+.Dsa img {
+  width: 100%;
+  height: auto;
+  display: flex;
+  cursor: pointer;
+  transition: 0.1s linear;
+}
+.Insta img:hover {
+  width: auto;
+  height: 80%;
+  transition: 0.1s linear;
+}
+.Vka img:hover {
+  width: auto;
+  height: 80%;
+  transition: 0.1s linear;
+}
+.Tga img:hover {
+  width: auto;
+  height: 97%;
+  transition: 0.1s linear;
+}
+.Dsa img:hover {
+  width: auto;
+  height: 80%;
+  transition: 0.1s linear;
+}
+.Time {
+  border-right-width: 0px;
+  flex-direction: column;
+  font-size: 3vh;
+}
+.Help {
+  cursor: pointer;
+  transition: 0.1s linear;
+}
+.Help:hover {
+  transition: 0.1s linear;
+  font-size: 4vh;
+}
+.Info:hover {
+  transition: 0.1s linear;
+  font-size: 4vh;
+}
+.Info {
+  flex-direction: column;
+  transition: 0.1s linear;
+  cursor: pointer;
+  align-items: center;
+}
+.Contacts {
+  justify-content: space-around;
+  border-left-width: 0px;
+  flex-direction: column;
+  font-size: 2vh;
+}
+.DownLevel {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.911);
+  height: 33vh;
+}
+
+@media (max-width: 1000px) {
+  .Contacts,
+  .Help,
+  .Nets,
+  .Info,
+  .Time {
+    font-size: 2vh;
+  }
+  .Contacts {
+    font-size: 1.5vh;
+  }
+}
+@media (max-width: 700px) {
+  .Contacts,
+  .Help,
+  .Nets,
+  .Info,
+  .Time {
+    font-size: 1.5vh;
+  }
+  .Contacts {
+    font-size: 1.2vh;
+  }
+  .Koko {
+    font-size: 2vh;
+  }
+}
+@media (max-width: 600px) {
+  .Contacts,
+  .Help,
+  .Nets,
+  .Info,
+  .Time {
+    font-size: 1vh;
+  }
+  .Contacts {
+    font-size: 0.8vh;
+  }
+  .Koko {
+    font-size: 1.5vh;
+  }
+}

@@ -1,0 +1,628 @@
+:root {
+  --primary-color: #29abe2; /* Более насыщенный синий */
+  --text-color: #222; /* Более темный серый для текста */
+  --bg-color: #ffffff; /* Чисто белый фон */
+  --border-color: #e0e0e0; /* Светло-серый для границ, чуть темнее */
+  --shadow-color: rgba(0, 0, 0, 0.15); /* Более выраженная тень */
+  --transition-duration: 0.2s; /* Сокращено время анимации */
+  --font-main: "Open Sans", sans-serif; /* Современный шрифт */
+  --accent-color: #ffc107; /* Желтый акцент */
+  --success-color: #4caf50; /* Зеленый цвет для успеха */
+  --error-color: #f44336; /* Красный цвет для ошибок */
+}
+
+/* Сброс стилей */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  -webkit-font-smoothing: antialiased; /* Улучшает отображение шрифтов в Webkit */
+  -moz-osx-font-smoothing: grayscale; /* Улучшает отображение шрифтов в Firefox */
+}
+
+/* Стили для корневого компонента (gigaBoy) */
+.gigaBoy {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0); /* Полупрозрачный фон, чуть светлее */
+  backdrop-filter: blur(10px); /* Увеличен блюр */
+  z-index: 1000;
+}
+
+/* Стили для основного контейнера (BIGguy) */
+.BIGguy {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-radius: 20px; /* Еще более скругленные углы */
+  width: 90%;
+  max-width: 1200px;
+  height: 90%;
+  line-height: 1.5; /* Немного уменьшено межстрочное расстояние */
+  max-height: 95vh;
+  padding: 50px; /* Еще больше padding */
+  overflow: auto;
+  font-size: 20px;
+  cursor: default;
+  box-shadow: 0 10px 25px var(--shadow-color); /* Еще более выраженная тень */
+  transition: all var(--transition-duration) ease-in-out;
+}
+
+/* Адаптивность для BIGguy */
+@media (max-width: 768px) {
+  .BIGguy {
+    width: 95%;
+    height: 95%;
+    padding: 30px;
+    font-size: 18px;
+  }
+}
+
+/* Сообщение об ошибке авторизации */
+.auth-message {
+  color: var(--error-color);
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Скрытие полосы прокрутки (webkit) */
+.BIGguy::-webkit-scrollbar {
+  display: none;
+}
+
+/* Кнопка закрытия */
+.ClosingButtonItemPage {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: tomato;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color var(--transition-duration) ease,
+    transform var(--transition-duration) ease; /* Added transform */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 12px var(--shadow-color); /* Более выраженная тень */
+}
+
+.ClosingButtonItemPage:hover {
+  background-color: #1e88e5;
+  transform: scale(1.1); /* Added scale */
+}
+
+/* HighItem */
+.HighItem {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 25px;
+  margin-bottom: 35px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+/* LeftBomb */
+.LeftBomb {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* leftButtons */
+.leftButtons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.leftButtons button,
+.upload-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 16px 28px; /* Increased padding slightly */
+  border-radius: 12px; /* More rounded corners */
+  font-size: 19px; /* Slightly increased font size */
+  cursor: pointer;
+  transition: background-color var(--transition-duration) ease,
+    transform var(--transition-duration) ease;
+  margin: 12px;
+  width: auto;
+  box-shadow: 0 6px 12px var(--shadow-color); /* More pronounced shadow */
+}
+
+.leftButtons button:hover,
+.upload-button:hover {
+  background-color: #1e88e5;
+  transform: translateY(-2px); /* Added slight lift effect */
+}
+
+/* upload-button */
+.upload-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* leftPhoto */
+.leftPhoto {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafafa; /* Lighter gray background */
+  border-radius: 18px; /* More rounded corners */
+  overflow: hidden;
+  box-shadow: 0 8px 18px var(--shadow-color); /* More pronounced shadow */
+  transition: border-color var(--transition-duration) ease; /* Added transition */
+}
+
+.leftPhoto:hover {
+  border-color: var(--accent-color); /* Change border color on hover */
+}
+
+.leftPhoto img {
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+  transition: transform var(--transition-duration) ease-in-out;
+}
+
+.leftPhoto:hover img {
+  transform: scale(1.05); /* Increased scaling slightly */
+}
+
+/* itemCharacteristics */
+.itemCharacteristics {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.itemCharacteristics p {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 12px;
+  background-color: #f5f5f5; /* Lighter gray background */
+  border-left: 8px solid var(--primary-color); /* Slightly thicker line */
+  font-size: 19px; /* Slightly increased font size */
+}
+
+.itemCharacteristics strong {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-right: 12px;
+}
+
+.itemCharacteristics input,
+.itemCharacteristics select {
+  width: 100%;
+  padding: 14px; /* Increased padding */
+  border: 1px solid var(--border-color);
+  border-radius: 10px; /* More rounded corners */
+  font-size: 19px; /* Slightly increased font size */
+  color: var(--text-color);
+  background-color: #fff;
+  transition: border-color var(--transition-duration) ease;
+}
+
+.itemCharacteristics input:focus,
+.itemCharacteristics select:focus {
+  border-color: var(--accent-color); /* Change border color on focus */
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added a subtle shadow on focus */
+}
+
+/* textarea */
+textarea {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px; /* More rounded corners */
+  font-size: 19px; /* Slightly increased font size */
+  color: var(--text-color);
+  background-color: #fff;
+  resize: none; /* Allow only vertical resizing */
+  transition: border-color var(--transition-duration) ease;
+}
+
+textarea:focus {
+  border-color: var(--accent-color); /* Change border color on focus */
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added a subtle shadow on focus */
+}
+
+/* changeNumber2 */
+.changeNumber2 {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 12px; /* More rounded corners */
+  padding: 16px 16px; /* Increased padding */
+  cursor: pointer;
+  font-size: 30px; /* Increased font size */
+  transition: background-color var(--transition-duration) ease,
+    color var(--transition-duration) ease,
+    transform var(--transition-duration) ease; /* Added transform */
+  box-shadow: 0 6px 12px var(--shadow-color); /* More pronounced shadow */
+}
+
+.changeNumber2:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: scale(1.1);
+}
+
+/* numberOfItem2 */
+.numberOfItem2 {
+  width: 60px;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: 24px; /* Increased font size */
+}
+
+/* rightDescription */
+.rightDescription {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.rightDescription input {
+  width: 100%;
+  padding: 14px; /* Increased padding */
+  border: 1px solid var(--border-color);
+  border-radius: 10px; /* More rounded corners */
+  font-size: 19px; /* Slightly increased font size */
+  color: var(--text-color);
+  background-color: #fff;
+  transition: border-color var(--transition-duration) ease;
+}
+
+.rightDescription input:focus {
+  border-color: var(--accent-color); /* Change border color on focus */
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added a subtle shadow on focus */
+}
+
+/* itemName */
+.itemName {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemName textarea {
+  width: 100%;
+  text-align: center;
+  font-size: 34px; /* Increased font size */
+  font-weight: 600;
+  border: none;
+  padding: 14px; /* Increased padding */
+  transition: all var(--transition-duration) ease-in-out;
+}
+
+.itemName textarea:focus {
+  outline: none;
+  background-color: #fff;
+  border-bottom: 2px solid var(--accent-color); /* Change border color on focus */
+}
+
+/* hightPrice, hightSale, hightAvailability */
+.hightPrice,
+.hightSale,
+.hightAvailability {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 12px;
+  background-color: #f5f5f5; /* Lighter gray background */
+  border-left: 8px solid var(--primary-color); /* Slightly thicker line */
+  font-size: 19px; /* Slightly increased font size */
+}
+
+/* About */
+.About {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.About textarea {
+  width: 100%;
+  height: 220px;
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px; /* More rounded corners */
+  font-size: 20px; /* Increased font size */
+  color: var(--text-color);
+  background-color: #fff;
+  font-style: italic;
+  resize: none; /* Allow vertical resizing */
+  transition: border-color var(--transition-duration) ease;
+}
+
+.About textarea:focus {
+  border-color: var(--accent-color); /* Change border color on focus */
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added a subtle shadow on focus */
+}
+
+/* DownViews */
+.DownViews {
+  width: 100%;
+  margin-top: 30px;
+  color: var(--text-color);
+}
+
+.DownViews div {
+  font-size: 22px;
+}
+
+/* View */
+.View {
+  width: 100%;
+  padding: 22px;
+  margin-bottom: 22px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px; /* More rounded corners */
+  background-color: #fff;
+  box-shadow: 0 6px 12px var(--shadow-color); /* More pronounced shadow */
+}
+
+/* NameView */
+.NameView {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* stars */
+.stars {
+  margin-left: 1vw;
+  display: flex;
+}
+
+/* star3 */
+.star3 {
+  width: 28px;
+  height: 28px;
+  margin-right: 5px;
+}
+
+/* namePLUSrate */
+.namePLUSrate {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+/* About input */
+.About input {
+  width: 100%;
+  padding: 14px; /* Increased padding */
+  border: 1px solid var(--border-color);
+  border-radius: 10px; /* More rounded corners */
+  font-size: 19px; /* Slightly increased font size */
+  color: var(--text-color);
+  background-color: #fff;
+  transition: border-color var(--transition-duration) ease;
+}
+
+.About input:focus {
+  border-color: var(--accent-color); /* Change border color on focus */
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added a subtle shadow on focus */
+}
+
+.DownButtons {
+  background-color: var(--success-color); /* Green color */
+  color: white;
+  border: none;
+  padding: 16px 28px; /* Increased padding slightly */
+  border-radius: 12px; /* More rounded corners */
+  font-size: 19px; /* Slightly increased font size */
+  cursor: pointer;
+  transition: background-color var(--transition-duration) ease,
+    transform var(--transition-duration) ease; /* Added transform */
+  margin: 12px;
+  box-shadow: 0 6px 12px var(--shadow-color); /* More pronounced shadow */
+}
+
+.DownButtons:hover {
+  background-color: #43a047; /* Darker shade of green */
+  transform: translateY(-2px); /* Added slight lift effect */
+}
+
+/* buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* buttonsItemPage */
+.buttonsItemPage {
+  display: flex;
+}
+
+/* ViewsButtons */
+.ViewsButtons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+}
+
+/* ViewsButtons button */
+.ViewsButtons button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 14px 24px; /* Slightly increased padding */
+  border-radius: 12px; /* More rounded corners */
+  font-size: 19px; /* Slightly increased font size */
+  cursor: pointer;
+  transition: background-color var(--transition-duration) ease,
+    transform var(--transition-duration) ease; /* Added transform */
+  margin-left: 12px;
+  box-shadow: 0 6px 12px var(--shadow-color); /* More pronounced shadow */
+}
+
+.ViewsButtons button:hover {
+  background-color: #1e88e5;
+  transform: translateY(-2px); /* Added slight lift effect */
+}
+
+/* myView */
+.myView {
+  width: 100%;
+  padding: 22px;
+  margin-bottom: 22px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px; /* More rounded corners */
+  background-color: #fff;
+  box-shadow: 0 6px 12px var(--shadow-color); /* More pronounced shadow */
+}
+
+/* Redacting */
+.Redacting {
+  width: 100%;
+  padding: 14px; /* Increased padding */
+  border: 1px solid var(--border-color);
+  border-radius: 10px; /* More rounded corners */
+  font-size: 19px; /* Slightly increased font size */
+  color: var(--text-color);
+  background-color: #fff;
+  transition: border-color var(--transition-duration) ease;
+}
+
+.Redacting:focus {
+  border-color: var(--accent-color); /* Change border color on focus */
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added a subtle shadow on focus */
+}
+
+/* Blue */
+.Blue {
+  background-color: #3498db;
+  color: white;
+  margin: 20px;
+}
+
+/* Red */
+.Red {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* Green */
+.Green {
+  background-color: #2ecc71;
+  color: white;
+}
+
+/* banViewButton, deleteViewButton */
+.banViewButton,
+.deleteViewButton {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* answerAdmin */
+.answerAdmin {
+  background-color: #2ecc71;
+  color: white;
+}
+
+/* answerAdminClose */
+.answerAdminClose {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* select */
+select {
+  width: 100%;
+  padding: 14px; /* Increased padding */
+  border: 1px solid var(--border-color);
+  border-radius: 10px; /* More rounded corners */
+  font-size: 19px; /* Slightly increased font size */
+  color: var(--text-color);
+  background-color: #fff;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px top 50%;
+  background-size: 20px;
+  transition: border-color var(--transition-duration) ease;
+}
+
+select:focus {
+  border-color: var(--accent-color); /* Change border color on focus */
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added a subtle shadow on focus */
+}
+
+/* NameAdmin */
+.NameAdmin {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* answer */
+.answer {
+  width: 100%;
+  padding: 22px;
+  margin-bottom: 22px;
+  margin-top: 22px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px; /* More rounded corners */
+  background-color: #fff;
+}
+
+/* Адаптивные медиа-запросы */
+@media (max-width: 768px) {
+  .HighItem {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .LeftBomb,
+  .rightDescription {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .itemName textarea {
+    font-size: 28px;
+  }
+
+  .ClosingButtonItemPage {
+    top: 15px;
+    right: 15px;
+  }
+}
