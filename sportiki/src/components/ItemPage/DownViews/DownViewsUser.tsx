@@ -46,6 +46,8 @@ export default function DownViews({
     const gettingInfo = async () => {
       await getAccountInfo();
     };
+
+    console.log(views);
     gettingInfo();
     if (views.filter((view) => view.viewed_account_id == Acc).length > 0) {
       setIsViewed(true);

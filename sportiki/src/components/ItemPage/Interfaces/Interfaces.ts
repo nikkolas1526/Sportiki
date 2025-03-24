@@ -25,6 +25,7 @@ export interface Views {
   viewtext: string | null;
   namee: string | null;
   answer: string | null;
+  accepted?: boolean;
 }
 export interface Roliks {
   item_id: number | null;

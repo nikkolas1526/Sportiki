@@ -9,17 +9,17 @@
   border-radius: 50%;
   display: flex;
   transition: 0.1s linear;
-  width: 8vw; /* Используем vw для адаптивности */
-  height: 10vh; /* Используем vh для адаптивности */
-  margin: 1% 2%; /* Упрощаем отступы */
+  width: 5vw;
+  height: 10vh;
+  margin: 1% 2%;
   user-select: none;
 }
 
 .PagaActive {
   background-color: skyblue;
   color: rgba(0, 0, 0, 0.911);
-  width: 9vw;
-  height: 12vh; /* Увеличиваем высоту для активного состояния */
+  width: 6.5vw;
+  height: 12vh;
 }
 
 .Strelas:hover,
@@ -35,29 +35,28 @@
   background-color: rgba(0, 0, 0, 0.342);
   flex-wrap: wrap;
   border-radius: 50px;
-  height: auto; /* Позволяем высоте изменяться автоматически */
-  width: 80%; /* Увеличиваем ширину для адаптивности */
-  font-size: 3.5vh; /* Шрифт также будет адаптивным */
+  height: auto;
+  width: 60%;
+  font-size: 3.5vh;
   margin-bottom: 7%;
   align-items: center;
   justify-content: center;
 }
 
-/* Медиа-запросы для дополнительных изменений на меньших экранах */
 @media (max-width: 768px) {
   .Strelas,
   .Strelae,
   .Paga,
   .PagaActive {
-    width: 12vw; /* Увеличиваем ширину на меньших экранах */
-    height: 8vh; /* Уменьшаем высоту на меньших экранах */
-    font-size: 2.5vh; /* Уменьшаем размер шрифта */
+    width: 12vw;
+    height: 8vh;
+    font-size: 2.5vh;
   }
 
   .Paginazi {
-    width: 90%; /* Ширина контейнера на меньших экранах */
-    height: auto; /* Высота адаптируется автоматически */
-    font-size: 3vh; /* Уменьшаем размер шрифта */
+    width: 90%;
+    height: auto;
+    font-size: 3vh;
   }
 }
 
@@ -66,12 +65,12 @@
   .Strelae,
   .Paga,
   .PagaActive {
-    width: 15vw; /* Еще больше увеличиваем ширину на мобильных устройствах */
-    height: 7vh; /* Уменьшаем высоту еще больше */
-    font-size: 2vh; /* Уменьшаем размер шрифта еще больше */
+    width: 15vw;
+    height: 7vh;
+    font-size: 2vh;
   }
 
   .Paginazi {
-    font-size: 2.5vh; /* Уменьшаем размер шрифта в контейнере */
+    font-size: 2.5vh;
   }
 }

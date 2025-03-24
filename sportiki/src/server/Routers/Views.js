@@ -30,6 +30,7 @@ router.post("/deleteAnswerView", async (req, res) => {
   );
   res.status(200);
 });
+
 router.post("/deleteView", async (req, res) => {
   let ion = req.body.viewed_account_id;
   let ion2 = req.body.item_id;

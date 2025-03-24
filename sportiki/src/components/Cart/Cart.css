@@ -1,9 +1,8 @@
 .Cart {
   background-color: rgba(0, 0, 0, 0.671);
-  width: 80%; /* Заменили фиксированную ширину на относительную */
-
-  max-width: 350px; /* Максимальная ширина для больших экранов */
-  height: 60vh; /* Сделаем высоту авто */
+  width: 23%;
+  max-width: 350px;
+  height: 60vh;
   display: flex;
   border-radius: 15px;
   flex-direction: column;
@@ -13,7 +12,7 @@
   color: #f9f0da;
   padding: 2vh;
   transition: 0.1s linear;
-  margin: 1.2vh auto; /* Центральное выравнивание */
+  margin: 1.2vh auto;
   cursor: pointer;
   overflow: hidden;
 }
@@ -154,7 +153,7 @@
 }
 
 .Photo {
-  height: 52%; /* Ограничиваем высоту для гармонии */
+  height: 52%;
   display: flex;
   background-color: rgb(255, 255, 255);
   width: 95%;
@@ -163,20 +162,20 @@
   transition: 0.1s linear;
   border-radius: 10%;
   padding: 4vh;
-  overflow: hidden; /* Избежать выхода контента за границы */
+  overflow: hidden;
 }
 
 .Photo img {
-  height: 100%; /* Устанавливаем высоту изображения на 100% для родительского блока */
-  width: 100%; /* Устанавливаем ширину изображения на 100% для родительского блока */
-  object-fit: contain; /* Обеспечивает правильное соотношение сторон */
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 .starKa,
 .starKa2 {
-  max-height: 100%; /* Устанавливаем максимальную высоту */
-  max-width: 100%; /* Устанавливаем максимальную ширину */
-  object-fit: contain; /* Обеспечивает правильное соотношение сторон */
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .Sale {
@@ -210,51 +209,50 @@
   justify-content: center;
 }
 
-/* Медиазапросы для адаптивности */
 @media (max-width: 768px) {
   .Cart {
-    width: 90%; /* Увеличиваем ширину на таблете и мобильных устройствах */
-    padding: 3vh 1vh; /* Увеличиваем внутренние отступы */
+    width: 90%;
+    padding: 3vh 1vh;
   }
 
   .PriceActual,
   .PriceWithSale,
   .NameIt {
-    font-size: 3vh; /* Увеличиваем шрифт для мобильных устройств */
+    font-size: 3vh;
   }
 
   .changeNumber {
-    width: 30%; /* Увеличиваем ширину кнопки */
+    width: 30%;
   }
 
   .buttonsCart {
-    flex-direction: column; /* Делаем кнопки вертикальными */
+    flex-direction: column;
   }
 
   .delete {
-    font-size: 2.5vh; /* Увеличиваем шрифт для кнопки удаления */
+    font-size: 2.5vh;
   }
 }
 
 @media (max-width: 480px) {
   .Cart {
-    padding: 2vh 1vh; /* Уменьшаем отступы для маленьких экранов */
+    padding: 2vh 1vh;
   }
 
   .articul {
-    font-size: 1.5vh; /* Значительно уменьшить размер текста */
+    font-size: 1.5vh;
   }
 
   .PriceActual,
   .PriceWithSale {
-    font-size: 2.5vh; /* Корректируем шрифты */
+    font-size: 2.5vh;
   }
 
   .Sale {
-    font-size: 2vh; /* Берем меньший размер для акций */
+    font-size: 2vh;
   }
 
   .StarKa {
-    height: 70%; /* Убедиться, что изображение подходит по размеру */
+    height: 70%;
   }
 }

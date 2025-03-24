@@ -64,6 +64,7 @@ export default function AccountPanel({
   const [email, setEmail] = useState("");
   const [confirmationSent, setConfirmationSent] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
   const handleEditClick = () => {
     setEditMode(true);
     setNickname(user.nickname);
@@ -440,6 +441,16 @@ export default function AccountPanel({
                   }}
                 >
                   Аккаунты
+                </button>
+                <button
+                  className="buttonAdminPanel"
+                  onClick={() => {
+                    navigate("/adminViews");
+                    setAdminAccountsPanel(true);
+                    setAccountPanel(false);
+                  }}
+                >
+                  Отзывы
                 </button>
                 <button
                   className="Exit"

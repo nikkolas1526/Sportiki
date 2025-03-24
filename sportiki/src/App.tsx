@@ -5,11 +5,18 @@ import MainContent from "./components/MainContent/MainContent.tsx";
 import AccountPage from "./components/accountPanel/accountPanel.tsx";
 import AdminOrders from "./components/accountPanel/AdminOrdersPanel/AdminOrderPanel.tsx";
 import AdminAccounts from "./components/accountPanel/AdminAccountsPanel/AdminAccountPanel.tsx";
+import AdminViews from "./components/accountPanel/AdminViewsPanel/AdminViewPanel.tsx";
+
 import { useState, useEffect } from "react";
 import LLoad from "../../sportiki/src/Images/load.gif";
 import "../src/components/Load.css";
 import Cookies from "js-cookie";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 
 function App() {
   const [token, setToken] = useState<string | null>(null);
@@ -89,6 +96,34 @@ function App() {
     console.log(token);
   }, [renderValue]);
 
+  var highGround = (
+    <HighGround
+      setSearch={setSearch}
+      admin={admin}
+      setAdmin={setAdmin}
+      setRenderValue={setRenderValue}
+      renderValue={renderValue}
+      setToken={setToken}
+      token={token}
+      search={search}
+      setAccountPanel={setAccountPanel}
+      accountPanel={accountPanel}
+      setAdminOrdersPanel={setAdminOrdersPan}
+      adminOrdersPanel={adminOrdersPan}
+      setLoad={setLoad}
+      searchOrders={searchOrders}
+      setSearchOrders={setSearchOrders}
+      searchAccounts={searchAccounts}
+      setSearchAccounts={setSearchAccounts}
+      setAdminAccountsPanel={setAdminAccountsPan}
+      adminAccountsPanel={adminAccountsPan}
+      likedPanel={likedPanel}
+      setLikedPanel={setLikedPanel}
+      bin={bin}
+      setBin={setBin}
+    />
+  );
+
   return (
     <Router>
       <div>
@@ -100,35 +135,12 @@ function App() {
           </div>
         )}
         <Routes>
+          <Route path="/" element={<Navigate to="/items" replace />} />
           <Route
             path="/items"
             element={
               <>
-                <HighGround
-                  setSearch={setSearch}
-                  admin={admin}
-                  setAdmin={setAdmin}
-                  setRenderValue={setRenderValue}
-                  renderValue={renderValue}
-                  setToken={setToken}
-                  token={token}
-                  search={search}
-                  setAccountPanel={setAccountPanel}
-                  accountPanel={accountPanel}
-                  setAdminOrdersPanel={setAdminOrdersPan}
-                  adminOrdersPanel={adminOrdersPan}
-                  setLoad={setLoad}
-                  searchOrders={searchOrders}
-                  setSearchOrders={setSearchOrders}
-                  searchAccounts={searchAccounts}
-                  setSearchAccounts={setSearchAccounts}
-                  setAdminAccountsPanel={setAdminAccountsPan}
-                  adminAccountsPanel={adminAccountsPan}
-                  likedPanel={likedPanel}
-                  setLikedPanel={setLikedPanel}
-                  bin={bin}
-                  setBin={setBin}
-                />
+                {highGround}
                 <MainContent
                   search={search}
                   admin={admin}
@@ -151,31 +163,7 @@ function App() {
             path="/accountPanel"
             element={
               <>
-                <HighGround
-                  setSearch={setSearch}
-                  admin={admin}
-                  setAdmin={setAdmin}
-                  setRenderValue={setRenderValue}
-                  renderValue={renderValue}
-                  setToken={setToken}
-                  token={token}
-                  search={search}
-                  setAccountPanel={setAccountPanel}
-                  accountPanel={accountPanel}
-                  setAdminOrdersPanel={setAdminOrdersPan}
-                  adminOrdersPanel={adminOrdersPan}
-                  setLoad={setLoad}
-                  searchOrders={searchOrders}
-                  setSearchOrders={setSearchOrders}
-                  searchAccounts={searchAccounts}
-                  setSearchAccounts={setSearchAccounts}
-                  setAdminAccountsPanel={setAdminAccountsPan}
-                  adminAccountsPanel={adminAccountsPan}
-                  likedPanel={likedPanel}
-                  setLikedPanel={setLikedPanel}
-                  bin={bin}
-                  setBin={setBin}
-                />
+                {highGround}
                 <AccountPage
                   token={token}
                   setAdmin={setAdmin}
@@ -191,36 +179,21 @@ function App() {
             }
           />
           <Route
+            path="/adminViews"
+            element={
+              <>
+                {" "}
+                {highGround} <AdminViews searchAccounts={searchOrders} />
+                <DownLevel />
+              </>
+            }
+          />
+          <Route
             path="/adminOrders"
             element={
               <>
                 {" "}
-                <HighGround
-                  setSearch={setSearch}
-                  admin={admin}
-                  setAdmin={setAdmin}
-                  setRenderValue={setRenderValue}
-                  renderValue={renderValue}
-                  setToken={setToken}
-                  token={token}
-                  search={search}
-                  setAccountPanel={setAccountPanel}
-                  accountPanel={accountPanel}
-                  setAdminOrdersPanel={setAdminOrdersPan}
-                  adminOrdersPanel={adminOrdersPan}
-                  setLoad={setLoad}
-                  searchOrders={searchOrders}
-                  setSearchOrders={setSearchOrders}
-                  searchAccounts={searchAccounts}
-                  setSearchAccounts={setSearchAccounts}
-                  setAdminAccountsPanel={setAdminAccountsPan}
-                  adminAccountsPanel={adminAccountsPan}
-                  likedPanel={likedPanel}
-                  setLikedPanel={setLikedPanel}
-                  bin={bin}
-                  setBin={setBin}
-                />{" "}
-                <AdminOrders searchOrders={searchOrders} />
+                {highGround} <AdminOrders searchOrders={searchOrders} />
                 <DownLevel />
               </>
             }
@@ -230,32 +203,7 @@ function App() {
             element={
               <>
                 {" "}
-                <HighGround
-                  setSearch={setSearch}
-                  admin={admin}
-                  setAdmin={setAdmin}
-                  setRenderValue={setRenderValue}
-                  renderValue={renderValue}
-                  setToken={setToken}
-                  token={token}
-                  search={search}
-                  setAccountPanel={setAccountPanel}
-                  accountPanel={accountPanel}
-                  setAdminOrdersPanel={setAdminOrdersPan}
-                  adminOrdersPanel={adminOrdersPan}
-                  setLoad={setLoad}
-                  searchOrders={searchOrders}
-                  setSearchOrders={setSearchOrders}
-                  searchAccounts={searchAccounts}
-                  setSearchAccounts={setSearchAccounts}
-                  setAdminAccountsPanel={setAdminAccountsPan}
-                  adminAccountsPanel={adminAccountsPan}
-                  likedPanel={likedPanel}
-                  setLikedPanel={setLikedPanel}
-                  bin={bin}
-                  setBin={setBin}
-                />{" "}
-                <AdminAccounts searchAccounts={searchAccounts} />
+                {highGround} <AdminAccounts searchAccounts={searchAccounts} />
                 <DownLevel />
               </>
             }

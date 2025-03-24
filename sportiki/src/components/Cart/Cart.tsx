@@ -38,13 +38,17 @@ function Cart(props: propsType) {
     transform: "rotateX(0deg) rotateY(0deg)",
     transition: "transform 0.1s",
   });
+
   const [dotPosition, setDotPosition] = useState<{ top: number; left: number }>(
     { top: 0, left: 0 }
   );
+
   const [showDot, setShowDot] = useState(false);
+
   useEffect(() => {
     console.log("ELA = " + element.number);
   }, [element]);
+
   const handleMouseMove = (e: React.MouseEvent) => {
     const { clientX, clientY, currentTarget } = e;
     const { offsetWidth, offsetHeight } = currentTarget;

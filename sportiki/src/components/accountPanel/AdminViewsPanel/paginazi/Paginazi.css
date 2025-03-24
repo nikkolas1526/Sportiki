@@ -1,38 +1,33 @@
-.Strelas2 {
-  background-color: #2487c9;
+.Strelas3 {
+  background-color: rgba(0, 0, 0, 0.555);
+  color: #f9f0da;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   display: flex;
   transition: 0.1s linear;
-  width: 10%;
+  width: 8%;
   height: 75%;
-  border: 4px rgb(190, 237, 255) solid;
-  color: rgb(190, 237, 255);
   margin-right: 5%;
   user-select: none;
   margin-left: 2%;
 }
-
-.Strelae2 {
-  background-color: #2487c9;
+.Strelae3 {
+  background-color: rgba(0, 0, 0, 0.555);
+  color: #f9f0da;
   align-items: center;
   justify-content: center;
   display: flex;
   border-radius: 50%;
   user-select: none;
   transition: 0.1s linear;
-  border: 4px rgb(190, 237, 255) solid;
-  color: rgb(190, 237, 255);
-  width: 10%;
+  width: 8%;
   height: 75%;
   margin-left: 5%;
 }
-
-.Paga2 {
-  background-color: #2487c9;
+.Paga3 {
+  background-color: rgba(0, 0, 0, 0.555);
   border-radius: 50%;
-  cursor: pointer;
   margin-right: 2%;
   margin-left: 2%;
   display: flex;
@@ -41,13 +36,11 @@
   justify-content: center;
   transition: 0.1s linear;
   color: #f9f0da;
-  width: 13.5%;
-  height: 70%;
-  border: 4px #2487c9 solid;
+  width: 8%;
+  height: 75%;
 }
-
-.PagaActive2 {
-  background-color: #4ab7ff;
+.PagaActive3 {
+  background-color: skyblue;
   user-select: none;
   border-radius: 50%;
   margin-right: 2%;
@@ -56,38 +49,38 @@
   align-items: center;
   justify-content: center;
   transition: 0.1s linear;
-  color: rgba(255, 255, 255, 0.911);
-  width: 14.5%;
+  color: rgba(0, 0, 0, 0.911);
+  width: 9%;
   height: 80%;
 }
-
-.Paginazi2 {
-  display: flex;
-  flex-direction: row;
-  background-color: rgba(255, 255, 255, 0);
-  flex-wrap: wrap;
-  border-radius: 70px;
-  width: 50%;
-  color: rgba(255, 255, 255, 0.911);
-  height: 12vh;
-  font-size: 3vh;
-  padding-top: 1vh;
-  padding-bottom: 0vh;
-  margin-top: 5%;
-  margin-left: 25%;
-  margin-right: 25%;
-  align-items: center;
-  justify-content: center;
+.Strelas3:hover {
+  background-color: rgba(0, 0, 0, 0.082);
+  transition: 0.1s linear;
+  cursor: pointer;
+}
+.Strelae3:hover {
+  background-color: rgba(0, 0, 0, 0.082);
+  transition: 0.1s linear;
+  cursor: pointer;
+}
+.Paga3:hover {
+  background-color: rgba(0, 0, 0, 0.082);
+  transition: 0.1s linear;
+  cursor: pointer;
 }
 
-@media (max-width: 600px) {
-  .Paga2 {
-    width: 30%;
-    height: 70%;
-  }
+.Paginazi3 {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.342);
+  flex-wrap: wrap;
+  border-radius: 50px;
+  height: 11vh;
+  width: 50%;
+  font-size: 3.5vh;
+  margin-bottom: 7%;
+  margin-top: 5%;
+  align-items: center;
 
-  .PagaActive2 {
-    width: 22%;
-    height: 80%;
-  }
+  justify-content: center;
 }
